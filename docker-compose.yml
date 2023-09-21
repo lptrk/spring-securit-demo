@@ -1,7 +1,7 @@
 version: '3.8'
 services:
   java-security:
-    image: java-security:latest # Verwenden Sie das gerade erstellte Image
+    image: java-security:latest
     ports:
       - "8000:8000"
       - "8080:8080"
@@ -12,6 +12,7 @@ services:
       - ./:/app
     depends_on:
       - mysqlserver
+    command: ["./mvnw", "spring-boot:run", "-Dspring-boot.run.profiles=mysql", "-Dspring-boot.run.jvmArguments='-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=*:8000'"]
 
   mysqlserver:
     image: mysql:8.0
@@ -26,6 +27,16 @@ services:
     volumes:
       - mysql_data:/var/lib/mysql
       - mysql_config:/etc/mysql/conf.d
+
+  react-app:
+    image: node:16
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./security-ui:/app
+    working_dir: /app
+    command: ["npm", "start"]
+
 volumes:
   mysql_data:
   mysql_config:
