@@ -70,7 +70,7 @@ build/
 /security-ui/src/index.tsx
 /node_modules/react/jsx-dev-runtime.js
 /node_modules/react/jsx-runtime.js
-/security-ui/src/pages/layout.tsx
+/security-ui/src/components/layout.tsx
 /node_modules/js-tokens/LICENSE
 /node_modules/loose-envify/LICENSE
 /node_modules/react/LICENSE
@@ -79,7 +79,7 @@ build/
 /node_modules/@remix-run/router/LICENSE.md
 /node_modules/react-router/LICENSE.md
 /node_modules/react-router-dom/LICENSE.md
-/security-ui/src/components/login.tsx
+/security-ui/src/components/login-button.tsx
 /security-ui/src/logo.svg
 /security-ui/public/logo192.png
 /security-ui/public/logo512.png
@@ -161,7 +161,7 @@ build/
 /node_modules/react-router-dom/README.md
 /node_modules/scheduler/README.md
 /security-ui/README.md
-/security-ui/src/components/register.tsx
+/security-ui/src/components/register-button.tsx
 /node_modules/loose-envify/replace.js
 /security-ui/src/reportWebVitals.ts
 /security-ui/public/robots.txt
