@@ -1,9 +1,13 @@
 import React from "react";
 
-export const LoginButton = () => {
+interface ButtonProps{
+    text:string;
+
+}
+
+export const Button : React.FC<ButtonProps> = ({text}) => {
     return (
-        <div>
-            <button className='
+        <> <button className='
              w-20
              hover:bg-stone-400
              rounded-md
@@ -14,8 +18,7 @@ export const LoginButton = () => {
              text-white
              p-1
              '>
-                Login
-            </button>
-        </div>
-    )
-}
+            {text}
+        </button></>
+    );
+};

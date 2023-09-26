@@ -3,10 +3,6 @@ import {RegisterForm} from "../components/forms/register-form";
 
 export const RegisterPage = () => {
     return (
-        <Layout>
-            <div className='h-full'>
-            <RegisterForm/>
-            </div>
-        </Layout>
+        <Layout children={<RegisterForm/>}/>
     );
 };

@@ -1,11 +1,8 @@
 import Layout from "../components/layout";
+import {LoginForm} from "../components/forms/login-form";
 
 export const LoginPage = () => {
     return (
-        <Layout>
-            <div className='h-full'>
-
-            </div>
-        </Layout>
+        <Layout children={<LoginForm/>}/>
     );
 };
